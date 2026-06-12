@@ -1,0 +1,39 @@
+{
+  "nattai": {
+    "system": "Carnatic",
+    "rasa": "Bhakti",
+    "description": "A bright and majestic raaga often used to begin concerts.",
+    "famousSongs": [
+      "Maha Ganapathim",
+      "Jagadanandakaraka"
+    ]
+  },
+
+  "hamsadhwani": {
+    "system": "Carnatic",
+    "rasa": "Bhakti",
+    "description": "An auspicious pentatonic raaga commonly used for invocatory compositions.",
+    "famousSongs": [
+      "Vatapi Ganapatim",
+      "Vande Mataram"
+    ]
+  },
+
+  "abheri": {
+    "system": "Carnatic",
+    "rasa": "Karuna",
+    "description": "A melodious raaga associated with devotion and emotion.",
+    "famousSongs": [
+      "Nagumomu"
+    ]
+  },
+
+  "mishra gara": {
+    "system": "Hindustani",
+    "rasa": "Bhakti",
+    "description": "Frequently used in devotional bhajans.",
+    "famousSongs": [
+      "Raghupathi Raghava Rajaram"
+    ]
+  }
+}

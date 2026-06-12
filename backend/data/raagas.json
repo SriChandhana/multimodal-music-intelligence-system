@@ -1,0 +1,61 @@
+{
+  "nagumomu": {
+    "raaga": "Abheri",
+    "taala": "Adi",
+    "system": "Carnatic",
+    "composer": "Tyagaraja",
+    "rasa": "Karuna",
+    "aaroh": "S G2 M1 P N2 S",
+    "avaroh": "S N2 D2 P M1 G2 R2 S",
+    "language": "Telugu"
+  },
+
+  "vatapi ganapatim": {
+    "raaga": "Hamsadhwani",
+    "taala": "Adi",
+    "system": "Carnatic",
+    "composer": "Muthuswami Dikshitar",
+    "rasa": "Bhakti",
+    "language": "Sanskrit",
+    "aaroh": "S R2 G3 P N3 S",
+    "avaroh": "S N3 P G3 R2 S"
+  },
+
+  "maha ganapathim": {
+    "raaga": "Nattai",
+    "taala": "Adi",
+    "system": "Carnatic",
+    "composer": "Muthuswami Dikshitar",
+    "rasa": "Bhakti",
+    "language": "Sanskrit",
+    "aaroh": "S R3 G3 M1 P N3 S",
+    "avaroh": "S N3 P M1 R3 S"
+  },
+
+  "raghupati raghava": {
+    "raaga": "Mishra Gara",
+    "taala": "Keharwa",
+    "system": "Hindustani",
+    "composer": "Traditional",
+    "rasa": "Bhakti",
+    "language": "Hindi"
+  },
+
+  "brochevarevarura": {
+    "raaga": "Khamas",
+    "taala": "Adi",
+    "system": "Carnatic",
+    "composer": "Mysore Vasudevachar",
+    "rasa": "Bhakti",
+    "language": "Telugu"
+  },
+  
+  "raghupathi raghava rajaram": {
+  "raaga": "Mishra Gara",
+  "taala": "Keharwa",
+  "system": "Hindustani",
+  "composer": "Traditional",
+  "rasa": "Bhakti",
+  "language": "Hindi"
+}
+}

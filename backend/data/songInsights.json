@@ -1,0 +1,31 @@
+{
+  "maha ganapathim": {
+    "description":
+      "Popular Carnatic kriti dedicated to Lord Ganesha.",
+
+    "occasion":
+      "Concert Opening",
+
+    "deity":
+      "Ganesha"
+  },
+
+  "vatapi ganapatim": {
+    "description":
+      "One of the most performed compositions of Muthuswami Dikshitar.",
+
+    "occasion":
+      "Concert Opening",
+
+    "deity":
+      "Ganesha"
+  },
+
+  "nagumomu": {
+    "description":
+      "Tyagaraja composition expressing devotion to Lord Rama.",
+
+    "deity":
+      "Rama"
+  }
+}
