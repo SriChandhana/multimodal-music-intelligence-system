@@ -42,31 +42,44 @@ An AI-powered multimodal music intelligence platform that identifies, analyzes, 
 ## 🏗️ Architecture
 
 ```text
-Input (Audio / Text / Image)
-            │
-            ▼
-     Custom MCP Server
-            │
-            ▼
-       Tool Router
-   ┌────────┼────────┐
-   │        │        │
-   ▼        ▼        ▼
-ACRCloud Spotify MusicBrainz
-   │        │        │
-   └────────┼────────┘
-            ▼
- Metadata Aggregation
-            ▼
- Music Intelligence Layer
-            ▼
- Indian Music Analysis
-            ▼
- Summary & Recommendations
-            ▼
+Input Layer
+   [Audio] [Text] [Image]
+              │
+              ▼
+     ┌─────────────────┐
+     │  Custom MCP     │
+     │  Server         │
+     │  (7 AI Tools)   │
+     └────────┬────────┘
+              │
+              ▼
+         Tool Router
+    ┌─────────┼─────────┐
+    │         │         │
+    ▼         ▼         ▼
+ACRCloud   Spotify  MusicBrainz
+(Audio ID) (Meta)  (Credits)
+    │         │         │
+    └─────────┼─────────┘
+              ▼
+   Metadata Aggregation
+              │
+              ▼
+  ┌───────────────────────┐
+  │  Music Intelligence   │
+  │  Layer (Claude API +  │
+  │  LLM Reasoning)       │
+  └───────────┬───────────┘
+              │
+              ▼
+  Indian Classical Analysis
+  (Raaga Detection)
+              │
+              ▼
+  Summary & Recommendations
+              │
+              ▼
       Unified Response
-```
-
 ---
 
 ## 🛠️ Tech Stack
