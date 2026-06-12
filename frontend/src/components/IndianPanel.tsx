@@ -2,281 +2,136 @@ type Props = {
   music: any;
 };
 
-const IndianPanel = ({
-  music
-}: Props) => {
+const IndianPanel = ({ music }: Props) => {
+  const data = music?.response || music || {};
+  const indian = music?.indianMetadata || {};
 
-  const data =
-  music?.response ||
-  music;
+  // Merge both objects
+  const merged = {
+    ...data,
+    ...indian,
+  };
 
-const indian =
-  music?.indianMetadata;
-const isIndian =
+  const isIndian =
+  merged?.system === "Carnatic" ||
+  merged?.system === "Hindustani" ||
+  merged?.raaga ||
+  merged?.taala ||
+  merged?.aaroh ||
+  merged?.avaroh;
 
-  data?.raaga ||
-
-  data?.composer ||
-
-  data?.system ||
-
-  indian?.raaga ||
-
-  indian?.language ||
-
-  indian?.musicType;
-  
-  if (!isIndian)
-    return null;
+  if (!isIndian) return null;
 
   return (
-
-  <div
-    className="
-      bg-[#0b1220]
-      border
-      border-green-500/20
-      rounded-3xl
-      p-6
-      backdrop-blur-lg
-      shadow-xl
-      h-full
-    "
-  >
-
     <div
       className="
-        flex
-        items-center
-        justify-between
-        mb-6
+        bg-[#0b1220]
+        border
+        border-green-500/20
+        rounded-3xl
+        p-6
+        backdrop-blur-lg
+        shadow-xl
+        h-full
       "
     >
-
-      <h2
-        className="
-          text-xl
-          font-bold
-          text-green-400
-        "
-      >
-        Indian Music Analysis
-      </h2>
-
       <div
         className="
-          px-3
-          py-1
-          rounded-full
-          bg-green-500/10
-          text-green-400
-          text-sm
+          flex
+          items-center
+          justify-between
+          mb-6
         "
       >
-        Classical
+        <h2
+          className="
+            text-xl
+            font-bold
+            text-green-400
+          "
+        >
+          Indian Music Analysis
+        </h2>
+
+        <div
+          className="
+            px-3
+            py-1
+            rounded-full
+            bg-green-500/10
+            text-green-400
+            text-sm
+          "
+        >
+          {merged?.musicType || merged?.system || "Indian"}
+        </div>
       </div>
 
-    </div>
-
-    <div
-      className="
-        grid
-        gap-3
-      "
-    >
-
-      {
-        data?.composer && (
-
-          <div
-            className="
-              bg-[#111827]
-              rounded-xl
-              p-3
-            "
-          >
-            <span className="text-zinc-400">
-              Composer
-            </span>
-
-            <p className="text-white">
-              {data.composer}
-            </p>
+      <div className="grid gap-3">
+        {merged?.composer && (
+          <div className="bg-[#111827] rounded-xl p-3">
+            <span className="text-zinc-400">Composer</span>
+            <p className="text-white">{merged.composer}</p>
           </div>
+        )}
 
-        )
-      }
-
-      {
-        data?.raaga && (
-
-          <div
-            className="
-              bg-[#111827]
-              rounded-xl
-              p-3
-            "
-          >
-            <span className="text-zinc-400">
-              Raaga
-            </span>
-
+        {merged?.raaga && (
+          <div className="bg-[#111827] rounded-xl p-3">
+            <span className="text-zinc-400">Raaga</span>
             <p className="text-green-400 font-semibold">
-              {data.raaga}
+              {merged.raaga}
             </p>
           </div>
+        )}
 
-        )
-      }
+        {merged?.taala && (
+          <div className="bg-[#111827] rounded-xl p-3">
+            <span className="text-zinc-400">Taala</span>
+            <p className="text-white">{merged.taala}</p>
+          </div>
+        )}
 
-      {
-        data?.taala && (
+        {merged?.rasa && (
+          <div className="bg-[#111827] rounded-xl p-3">
+            <span className="text-zinc-400">Rasa</span>
+            <p className="text-white">{merged.rasa}</p>
+          </div>
+        )}
 
-          <div
-            className="
-              bg-[#111827]
-              rounded-xl
-              p-3
-            "
-          >
-            <span className="text-zinc-400">
-              Taala
-            </span>
+        {merged?.system && (
+          <div className="bg-[#111827] rounded-xl p-3">
+            <span className="text-zinc-400">System</span>
+            <p className="text-white">{merged.system}</p>
+          </div>
+        )}
 
-            <p className="text-white">
-              {data.taala}
+        {merged?.language && (
+          <div className="bg-[#111827] rounded-xl p-3">
+            <span className="text-zinc-400">Language</span>
+            <p className="text-white">{merged.language}</p>
+          </div>
+        )}
+
+        {merged?.aaroh && (
+          <div className="bg-[#111827] rounded-xl p-3">
+            <span className="text-zinc-400">Aaroh</span>
+            <p className="text-green-400 font-mono">
+              {merged.aaroh}
             </p>
           </div>
+        )}
 
-        )
-      }
-
-      {
-        data?.rasa && (
-
-          <div
-            className="
-              bg-[#111827]
-              rounded-xl
-              p-3
-            "
-          >
-            <span className="text-zinc-400">
-              Rasa
-            </span>
-
-            <p className="text-white">
-              {data.rasa}
+        {merged?.avaroh && (
+          <div className="bg-[#111827] rounded-xl p-3">
+            <span className="text-zinc-400">Avaroh</span>
+            <p className="text-green-400 font-mono">
+              {merged.avaroh}
             </p>
           </div>
-
-        )
-      }
-
-      {
-        data?.system && (
-
-          <div
-            className="
-              bg-[#111827]
-              rounded-xl
-              p-3
-            "
-          >
-            <span className="text-zinc-400">
-              System
-            </span>
-
-            <p className="text-white">
-              {data.system}
-            </p>
-          </div>
-
-        )
-      }
-
-      {
-        data?.language && (
-
-          <div
-            className="
-              bg-[#111827]
-              rounded-xl
-              p-3
-            "
-          >
-            <span className="text-zinc-400">
-              Language
-            </span>
-
-            <p className="text-white">
-              {data.language}
-            </p>
-          </div>
-
-        )
-      }
-
-      {
-        data?.aaroh && (
-
-          <div
-            className="
-              bg-[#111827]
-              rounded-xl
-              p-3
-            "
-          >
-            <span className="text-zinc-400">
-              Aaroh
-            </span>
-
-            <p
-              className="
-                text-green-400
-                font-mono
-              "
-            >
-              {data.aaroh}
-            </p>
-          </div>
-
-        )
-      }
-
-      {
-        data?.avaroh && (
-
-          <div
-            className="
-              bg-[#111827]
-              rounded-xl
-              p-3
-            "
-          >
-            <span className="text-zinc-400">
-              Avaroh
-            </span>
-
-            <p
-              className="
-                text-green-400
-                font-mono
-              "
-            >
-              {data.avaroh}
-            </p>
-          </div>
-
-        )
-      }
-
+        )}
+      </div>
     </div>
-
-  </div>
-
-);
-
+  );
 };
 
 export default IndianPanel;

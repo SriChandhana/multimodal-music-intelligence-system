@@ -3,7 +3,8 @@ from "../../../data/raagaKnowledge.json";
 
 import raagaDB
 from "../../../data/raagas.json";
-
+import { getArtistSongs }
+from "./artistLookup.service";
 import {
   getSimilarSongs
 }
@@ -23,6 +24,7 @@ import {
   lookupSong
 }
 from "./songLookup.service";
+import { buildMusicResponse } from "../../utils/buildMusicResponse";
 
 export const processMusicQuery =
 async (
@@ -182,7 +184,7 @@ if (songData) {
         response:
           songInsight
 
-      };
+      };                                                                                  
 
     }
 
@@ -386,57 +388,79 @@ if (songData) {
 
 
   }
+  // -------------------
+// Artist Search
+// -------------------
 
-  // -------------------
-  // Direct Search
-  // -------------------
+const artistSongs =
+  getArtistSongs(query);
+
+if (artistSongs.length) {
+
+  return {
+
+    type: "artist",
+
+    response: {
+      artist: query,
+      topSongs: artistSongs
+    }
+
+  };
+
+}
 
   const spotifyData =
-    await lookupSpotifySong(
-      query
-    );
+  await lookupSpotifySong(
+    query
+  );
 
-  if (spotifyData) {
+if (spotifyData) {
 
-    return {
+  const normalizedQuery =
+    query
+      .toLowerCase()
+      .trim();
 
-      type:
-        "spotify_song",
+  const songData =
+    Object.entries(
+      raagaDB
+    ).find(
 
-      response:
-        spotifyData
+      ([key]) =>
 
-    };
+        key
+          .toLowerCase()
+          .trim() ===
+        normalizedQuery
 
-  }
+    )?.[1];
 
-  const songMetadata =
-    await lookupSong(
-      query
-    );
+  const classification = {
 
-  if (songMetadata) {
+    category:
+      songData
+        ? "Indian Classical"
+        : "General Music"
 
-    return {
-
-      type:
-        "song_metadata",
-
-      response:
-        songMetadata
-
-    };
-
-  }
+  };
 
   return {
 
     type:
-      "unknown",
+      "spotify_song",
 
-    response:
-      "Query not supported yet."
+    ...buildMusicResponse(
+
+      spotifyData,
+
+      classification,
+
+      songData || null
+
+    )
 
   };
 
-};
+}
+}

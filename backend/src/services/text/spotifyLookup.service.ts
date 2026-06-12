@@ -1,7 +1,6 @@
 import {
   searchSpotifyTrack
-}
-from "../metadata/spotify.service";
+} from "../metadata/spotify.service";
 
 export const lookupSpotifySong =
 async (
@@ -36,24 +35,47 @@ async (
       album:
         track.album?.name,
 
-      releaseDate:
-        track.album
-          ?.release_date,
+      genre: null,
 
-      popularity:
-        track.popularity,
+      duration:
+        Math.floor(
+          track.duration_ms / 1000
+        ) + " sec",
 
-      spotifyUrl:
-        track.external_urls
-          ?.spotify,
+      release_date:
+        track.album?.release_date,
 
-      image:
-        track.album
-          ?.images?.[0]?.url
+      credits: [],
+
+      spotify: {
+
+        track_id:
+          track.id,
+
+        track_name:
+          track.name,
+
+        album_image:
+          track.album
+            ?.images?.[0]?.url,
+
+        external_url:
+          track.external_urls
+            ?.spotify,
+
+        popularity:
+          track.popularity
+
+      }
 
     };
 
-  } catch {
+  } catch (error) {
+
+    console.error(
+      "Spotify Lookup Error:",
+      error
+    );
 
     return null;
 
