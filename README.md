@@ -194,3 +194,10 @@ SPOTIFY_CLIENT_SECRET=
 * Artist profile enrichment
 * Advanced semantic music search
 * Production deployment
+
+```
+👩‍💻 Author
+
+Kandula Sri Chandhana
+
+B.Tech CSE (AI & ML), VNR VJIET
