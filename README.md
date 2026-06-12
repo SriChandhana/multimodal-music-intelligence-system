@@ -111,11 +111,13 @@ ACRCloud Spotify MusicBrainz
 
 ### Home Page
 
-*Coming Soon*
+<img width="1910" height="856" alt="image" src="https://github.com/user-attachments/assets/0a456212-311d-4f7a-b3c2-2c7d3f3ac263" />
+
 
 ### Audio Recognition
 
-*Coming Soon*
+<img width="1855" height="846" alt="image" src="https://github.com/user-attachments/assets/5b04eab1-dde0-4abd-85a2-70bf14de6344" />
+
 
 ### Text Search
 
