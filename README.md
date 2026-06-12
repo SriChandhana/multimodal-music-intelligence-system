@@ -121,15 +121,23 @@ ACRCloud Spotify MusicBrainz
 
 ### Text Search
 
-*Coming Soon*
+<img width="1905" height="862" alt="image" src="https://github.com/user-attachments/assets/78a32245-9ca0-4afa-be05-f2c1aec0dee4" />
+<img width="1811" height="824" alt="image" src="https://github.com/user-attachments/assets/032eb860-6248-479c-a1f3-80c91a515ce8" />
+
 
 ### Indian Music Analysis
 
-*Coming Soon*
+<img width="1906" height="835" alt="image" src="https://github.com/user-attachments/assets/f91ae6b1-a8b1-40bc-b8ac-86b2c295af89" />
+
+<img width="1870" height="887" alt="image" src="https://github.com/user-attachments/assets/88205cda-b695-43de-8d0a-ec4c549f67b3" />
 
 ### Similar Song Recommendations
+<img width="1896" height="846" alt="image" src="https://github.com/user-attachments/assets/bb339f16-cee5-4ab0-b488-89872775f669" />
+<img width="1860" height="862" alt="image" src="https://github.com/user-attachments/assets/eacc7f5a-1ea0-4871-bd29-3483d83d70f6" />
 
-*Coming Soon*
+### Artist Lookup
+<img width="1919" height="853" alt="image" src="https://github.com/user-attachments/assets/7f832a51-9ed2-45b9-b64a-927a0a4a74a4" />
+### AI summary
 
 ---
 
