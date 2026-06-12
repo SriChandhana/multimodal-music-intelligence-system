@@ -120,8 +120,7 @@ ACRCloud Spotify MusicBrainz
 
 
 ### Text Search
-
-<img width="1905" height="862" alt="image" src="https://github.com/user-attachments/assets/78a32245-9ca0-4afa-be05-f2c1aec0dee4" />
+<img width="1880" height="369" alt="image" src="https://github.com/user-attachments/assets/633a5c54-fea2-43a6-b05c-ad01ce784e93" />
 <img width="1811" height="824" alt="image" src="https://github.com/user-attachments/assets/032eb860-6248-479c-a1f3-80c91a515ce8" />
 
 
