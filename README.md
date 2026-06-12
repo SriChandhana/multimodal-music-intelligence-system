@@ -137,7 +137,10 @@ ACRCloud Spotify MusicBrainz
 
 ### Artist Lookup
 <img width="1919" height="853" alt="image" src="https://github.com/user-attachments/assets/7f832a51-9ed2-45b9-b64a-927a0a4a74a4" />
-### AI summary
+### AI Summary
+<img width="1912" height="879" alt="image" src="https://github.com/user-attachments/assets/4ef1cdd1-001b-4fe3-8517-a715d6bab2f9" />
+<img width="1807" height="860" alt="image" src="https://github.com/user-attachments/assets/9f413679-1a00-4a47-98e5-957f952168b2" />
+<img width="1852" height="431" alt="image" src="https://github.com/user-attachments/assets/026b00e7-41ef-4379-8de9-a064801e64a2" />
 
 ---
 
