@@ -80,6 +80,7 @@ ACRCloud   Spotify  MusicBrainz
               │
               ▼
       Unified Response
+```
 ---
 
 ## 🛠️ Tech Stack
