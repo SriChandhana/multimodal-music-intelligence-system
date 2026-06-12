@@ -42,7 +42,7 @@ An AI-powered multimodal music intelligence platform that identifies, analyzes, 
 ## 🏗️ Architecture
 
 ```text
-Input Layer
+        Input Layer
    [Audio] [Text] [Image]
               │
               ▼
