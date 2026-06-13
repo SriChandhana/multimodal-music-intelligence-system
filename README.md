@@ -42,31 +42,45 @@ An AI-powered multimodal music intelligence platform that identifies, analyzes, 
 ## 🏗️ Architecture
 
 ```text
-Input (Audio / Text / Image)
-            │
-            ▼
-     Custom MCP Server
-            │
-            ▼
-       Tool Router
-   ┌────────┼────────┐
-   │        │        │
-   ▼        ▼        ▼
-ACRCloud Spotify MusicBrainz
-   │        │        │
-   └────────┼────────┘
-            ▼
- Metadata Aggregation
-            ▼
- Music Intelligence Layer
-            ▼
- Indian Music Analysis
-            ▼
- Summary & Recommendations
-            ▼
+        Input Layer
+   [Audio] [Text] [Image]
+              │
+              ▼
+     ┌─────────────────┐
+     │  Custom MCP     │
+     │  Server         │
+     │  (7 AI Tools)   │
+     └────────┬────────┘
+              │
+              ▼
+         Tool Router
+    ┌─────────┼─────────┐
+    │         │         │
+    ▼         ▼         ▼
+ACRCloud   Spotify  MusicBrainz
+(Audio ID) (Meta)  (Credits)
+    │         │         │
+    └─────────┼─────────┘
+              ▼
+   Metadata Aggregation
+              │
+              ▼
+  ┌───────────────────────┐
+  │  Music Intelligence   │
+  │  Layer (Claude API +  │
+  │  LLM Reasoning)       │
+  └───────────┬───────────┘
+              │
+              ▼
+  Indian Classical Analysis
+  (Raaga Detection)
+              │
+              ▼
+  Summary & Recommendations
+              │
+              ▼
       Unified Response
 ```
-
 ---
 
 ## 🛠️ Tech Stack
@@ -111,23 +125,38 @@ ACRCloud Spotify MusicBrainz
 
 ### Home Page
 
-*Coming Soon*
+<img width="1910" height="856" alt="image" src="https://github.com/user-attachments/assets/0a456212-311d-4f7a-b3c2-2c7d3f3ac263" />
+
 
 ### Audio Recognition
 
-*Coming Soon*
+<img width="1855" height="846" alt="image" src="https://github.com/user-attachments/assets/5b04eab1-dde0-4abd-85a2-70bf14de6344" />
+
 
 ### Text Search
+<img width="1880" height="369" alt="image" src="https://github.com/user-attachments/assets/633a5c54-fea2-43a6-b05c-ad01ce784e93" />
+<img width="1811" height="824" alt="image" src="https://github.com/user-attachments/assets/032eb860-6248-479c-a1f3-80c91a515ce8" />
 
-*Coming Soon*
 
 ### Indian Music Analysis
 
-*Coming Soon*
+<img width="1906" height="835" alt="image" src="https://github.com/user-attachments/assets/f91ae6b1-a8b1-40bc-b8ac-86b2c295af89" />
+
+<img width="1870" height="887" alt="image" src="https://github.com/user-attachments/assets/88205cda-b695-43de-8d0a-ec4c549f67b3" />
 
 ### Similar Song Recommendations
+<img width="1874" height="629" alt="image" src="https://github.com/user-attachments/assets/d4b2fc39-6a81-4a92-866b-3d65e3f00e99" />
 
-*Coming Soon*
+<img width="1860" height="862" alt="image" src="https://github.com/user-attachments/assets/eacc7f5a-1ea0-4871-bd29-3483d83d70f6" />
+
+### Artist Lookup
+<img width="1919" height="853" alt="image" src="https://github.com/user-attachments/assets/7f832a51-9ed2-45b9-b64a-927a0a4a74a4" />
+
+### AI Summary
+<img width="1906" height="427" alt="image" src="https://github.com/user-attachments/assets/02f738fd-2d8c-4133-b735-954254f88e48" />
+
+<img width="1807" height="860" alt="image" src="https://github.com/user-attachments/assets/9f413679-1a00-4a47-98e5-957f952168b2" />
+<img width="1852" height="431" alt="image" src="https://github.com/user-attachments/assets/026b00e7-41ef-4379-8de9-a064801e64a2" />
 
 ---
 
@@ -179,3 +208,10 @@ SPOTIFY_CLIENT_SECRET=
 * Artist profile enrichment
 * Advanced semantic music search
 * Production deployment
+
+```
+👩‍💻 Author
+
+Kandula Sri Chandhana
+
+B.Tech CSE (AI & ML), VNR VJIET
