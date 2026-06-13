@@ -40,7 +40,7 @@ async (
       duration:
         Math.floor(
           track.duration_ms / 1000
-        ) + " sec",
+        ),
 
       release_date:
         track.album?.release_date,
@@ -62,7 +62,7 @@ async (
         external_url:
           track.external_urls
             ?.spotify,
-
+        
         popularity:
           track.popularity
 

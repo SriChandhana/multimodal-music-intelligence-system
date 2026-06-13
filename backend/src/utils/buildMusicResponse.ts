@@ -79,8 +79,12 @@ const raagaKnowledge =
       genre:
         data.genre,
 
-      duration:
-        data.duration,
+duration:
+  data.duration_ms
+    ? Math.floor(
+        data.duration_ms / 1000
+      )
+    : data.duration,
 
       releaseDate:
         data.release_date,

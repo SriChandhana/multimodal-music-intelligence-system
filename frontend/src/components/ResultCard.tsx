@@ -1,4 +1,6 @@
-  type Props = {
+ import { formatDuration }
+from "../../../backend/src/utils/formatDuration";
+ type Props = {
     music: any;
   };
 
@@ -264,26 +266,26 @@ if (music?.type === "artist") {
           }
 
           {
-            data?.duration && (
+  data?.duration && (
 
-              <div
-                className="
-                  bg-[#111827]
-                  rounded-xl
-                  p-3
-                "
-              >
-                <span className="text-zinc-400">
-                  Duration
-                </span>
+    <div
+      className="
+        bg-[#111827]
+        rounded-xl
+        p-3
+      "
+    >
+      <span className="text-zinc-400">
+        Duration
+      </span>
 
-                <p className="text-white">
-                  {data.duration}
-                </p>
-              </div>
+      <p className="text-white">
+        {formatDuration(data.duration)}
+      </p>
+    </div>
 
-            )
-          }
+  )
+}
 
           {
             data?.releaseDate && (

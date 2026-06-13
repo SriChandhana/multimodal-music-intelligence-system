@@ -1,9 +1,14 @@
 export const formatDuration = (
-  durationMs: number
+  totalSeconds: number
 ) => {
 
-  const totalSeconds =
-    Math.floor(durationMs / 1000);
+  if (
+    totalSeconds === undefined ||
+    totalSeconds === null ||
+    isNaN(totalSeconds)
+  ) {
+    return "N/A";
+  }
 
   const minutes =
     Math.floor(totalSeconds / 60);
@@ -14,5 +19,4 @@ export const formatDuration = (
   return `${minutes}:${
     seconds < 10 ? "0" : ""
   }${seconds}`;
-
 };
